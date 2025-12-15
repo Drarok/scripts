@@ -8,6 +8,8 @@ Clone this repo, and add it to your `PATH`. Note that some of the scripts requir
 
 ### half
 
+This script requires [ImageMagick](https://imagemagick.org/) be installed and available in your `PATH`.
+
 Call this script with the filename of an image to resize that image to 50%, saving as `${name}-resized.${ext}` in the current directory.
 
 ### remux.sh
