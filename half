@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+const child_process = require('child_process')
+const path = require('node:path')
+
+const args = process.argv.slice(2)
+
+if (args.length === 0) {
+  console.log("You must pass a filename to this script.")
+  process.exit(1)
+}
+
+const filename = args[0]
+const { name, ext } = path.parse(filename)
+const resizedName = `${name}-resized${ext}`
+
+const ps = child_process.spawn("magick", [filename, "-resize", "50%", resizedName])
+ps.stdout.pipe(process.stdout)
+ps.stderr.pipe(process.stderr)
+
+ps.on('close', code => {
+  process.exit(code)
+})
