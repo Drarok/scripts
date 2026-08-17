@@ -6,6 +6,12 @@ These are some scripts that I use occasionally which needed a home.
 
 Clone this repo, and add it to your `PATH`. Note that some of the scripts require Nodejs, hence the mise.toml present at the root. You'll want to have [mise](https://mise.jdx.dev/) installed.
 
+### gify
+
+This script requires [ffmpeg](https://www.ffmpeg.org/) be installed and available in your `PATH`.
+
+Converts a video file to GIF using a Lanczos scaling algorithm, and [palettegen](https://ffmpeg.org/ffmpeg-filters.html#palettegen) and [paletteuse](https://ffmpeg.org/ffmpeg-filters.html#paletteuse) filters.
+
 ### half
 
 This script requires [ImageMagick](https://imagemagick.org/) be installed and available in your `PATH`.
